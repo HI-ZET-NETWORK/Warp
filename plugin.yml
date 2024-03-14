@@ -1,0 +1,10 @@
+name: Warp
+version: 0.0.1
+main: pocketmobs\Warp\Main
+author: HIZETORG
+api: 5.0.0
+permissions:
+  warp:
+    default: true
+  warp.setup:
+    default: op
