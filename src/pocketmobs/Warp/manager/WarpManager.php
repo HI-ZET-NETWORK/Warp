@@ -1,6 +1,6 @@
 <?php
 
-namespace pocketmobs\Warp\commands\manager;
+namespace pocketmobs\Warp\manager;
 
 use ArrayIterator;
 use Exception;
@@ -11,7 +11,7 @@ use pocketmine\Server;
 use pocketmine\utils\Config;
 use pocketmine\utils\TextFormat;
 use pocketmine\world\Position;
-use pocketmobs\Warp\commands\event\WarpEvent;
+use pocketmobs\Warp\event\WarpEvent;
 use pocketmobs\Warp\Main;
 use Traversable;
 

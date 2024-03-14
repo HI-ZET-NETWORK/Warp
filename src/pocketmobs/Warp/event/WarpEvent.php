@@ -1,12 +1,12 @@
 <?php
 
-namespace pocketmobs\Warp\commands\event;
+namespace pocketmobs\Warp\event;
 
 use pocketmine\event\Cancellable;
 use pocketmine\event\CancellableTrait;
 use pocketmine\event\player\PlayerEvent;
 use pocketmine\player\Player;
-use pocketmobs\Warp\commands\manager\Warp;
+use pocketmobs\Warp\manager\Warp;
 
 class WarpEvent extends PlayerEvent implements Cancellable
 {

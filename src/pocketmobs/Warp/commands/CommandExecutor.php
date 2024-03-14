@@ -8,10 +8,10 @@ use dktapps\pmforms\MenuForm;
 use dktapps\pmforms\MenuOption;
 use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
-use pocketmobs\Warp\commands\manager\Warp;
 use pocketmobs\Warp\commands\subcmd\AddCommand;
 use pocketmobs\Warp\commands\subcmd\DeleteCommand;
 use pocketmobs\Warp\Main;
+use pocketmobs\Warp\manager\Warp;
 
 class CommandExecutor extends BaseCommand
 {

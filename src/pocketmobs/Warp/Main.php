@@ -5,7 +5,7 @@ namespace pocketmobs\Warp;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\SingletonTrait;
 use pocketmobs\Warp\commands\CommandExecutor;
-use pocketmobs\Warp\commands\manager\WarpManager;
+use pocketmobs\Warp\manager\WarpManager;
 
 class Main extends PluginBase
 {
