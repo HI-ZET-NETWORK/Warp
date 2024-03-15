@@ -20,6 +20,7 @@ class CommandExecutor extends BaseCommand
     {
         $this->registerSubCommand(new AddCommand("add"));
         $this->registerSubCommand(new DeleteCommand("delete"));
+        $this->setPermission("warp");
     }
 
     public function onRun(CommandSender $sender, string $aliasUsed, array $args): void
