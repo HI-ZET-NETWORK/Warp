@@ -27,7 +27,7 @@ class DeleteCommand extends BaseSubCommand
         try {
             $name = $args["name"];
             Main::getInstance()->getWarpManager()->removeWarp($name);
-            $sender->sendMessage(TextFormat::GREEN . "Success add warp with nane $name");
+            $sender->sendMessage(TextFormat::GREEN . "Success delete warp with name $name");
         } catch (Exception $e) {
             $sender->sendMessage(TextFormat::RED . $e->getMessage());
         }
