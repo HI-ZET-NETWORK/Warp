@@ -20,6 +20,7 @@ class CommandExecutor extends BaseCommand
     {
         $this->registerSubCommand(new AddCommand("add"));
         $this->registerSubCommand(new DeleteCommand("delete"));
+        $this->setPermission("warp");
     }
 
     public function onRun(CommandSender $sender, string $aliasUsed, array $args): void
@@ -28,7 +29,7 @@ class CommandExecutor extends BaseCommand
             $warps = Main::getInstance()->getWarpManager()->getAll()->map(function (Warp $warp) : MenuOption{
                 return new MenuOption($warp->getDisplayName(), $warp->getIcon() !== null ? new FormIcon($warp->getIcon(), $warp->getIconPath()) : null);
             });
-            $menuForm = new MenuForm("Warps", "", $warps, function(Player $player, int $selectedOption) : void{
+            $menuForm = new MenuForm("Warps", "", $warps->toArray(), function(Player $player, int $selectedOption) : void{
                 $warp = Main::getInstance()->getWarpManager()->getAll()->get($selectedOption);
                 if ($warp instanceof Warp) {
                     $warp->teleport($player);

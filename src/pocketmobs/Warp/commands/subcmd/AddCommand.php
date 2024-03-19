@@ -10,6 +10,7 @@ use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
 use pocketmine\utils\TextFormat;
 use pocketmobs\Warp\Main;
+use pocketmobs\Warp\manager\Warp;
 
 class AddCommand extends BaseSubCommand
 {
@@ -29,10 +30,12 @@ class AddCommand extends BaseSubCommand
     public function onRun(CommandSender $sender, string $aliasUsed, array $args): void
     {
         if (!$sender instanceof Player) return;
+        $icon = isset($args["icon"]) ? $args["icon"] : null;
+        $iPath = isset($args["iconPath"]) ? $args["iconPath"] : Warp::ICON_PATH;
         try {
             $name = $args["name"];
-            Main::getInstance()->getWarpManager()->addWarp($name, $args["displayName"], $args["icon"], $sender->getPosition(), $args["iconPath"]);
-            $sender->sendMessage(TextFormat::GREEN . "Success add warp with nane $name");
+            Main::getInstance()->getWarpManager()->addWarp($name, $args["displayName"], $icon, $sender->getPosition(), $iPath);
+            $sender->sendMessage(TextFormat::GREEN . "Success add warp with name $name");
         } catch (Exception $e) {
             $sender->sendMessage(TextFormat::RED . $e->getMessage());
         }
