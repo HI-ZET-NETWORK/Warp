@@ -24,7 +24,7 @@ class AddCommand extends BaseSubCommand
         $this->registerArgument(1, new RawStringArgument("displayName"));
         $this->registerArgument(2, new RawStringArgument("icon", true));
         $this->registerArgument(3, new RawStringArgument("iconPath", true));
-        $this->setPermission("warp.set");
+        $this->setPermission("warps.set");
     }
 
     public function onRun(CommandSender $sender, string $aliasUsed, array $args): void

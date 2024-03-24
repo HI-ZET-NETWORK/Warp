@@ -4,7 +4,7 @@ main: pocketmobs\Warp\Main
 author: HIZETORG
 api: 5.0.0
 permissions:
-  warp:
+  warps:
     default: true
-  warp.set:
+  warps.set:
     default: op

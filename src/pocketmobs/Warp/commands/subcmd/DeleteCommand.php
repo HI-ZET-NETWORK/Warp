@@ -19,7 +19,7 @@ class DeleteCommand extends BaseSubCommand
     protected function prepare(): void
     {
         $this->registerArgument(0, new RawStringArgument("name"));
-        $this->setPermission("warp.set");
+        $this->setPermission("warps.set");
     }
 
     public function onRun(CommandSender $sender, string $aliasUsed, array $args): void
