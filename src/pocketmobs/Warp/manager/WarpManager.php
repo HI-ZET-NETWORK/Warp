@@ -136,6 +136,7 @@ class WarpManager
         $this->warps->add($warp);
         $config = new Config($this->plugin->getDataFolder() . "warps.yml", Config::YAML);
         $config->set($name, (array) $warp->getIterator());
+        $config->save();
     }
 
     /**
